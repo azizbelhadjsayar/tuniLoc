@@ -1,0 +1,165 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+}
+
+main {
+    width: 100%;
+    /* background-color: antiquewhite; */
+    min-height: 200px;
+    padding-top: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main #locations {
+    width: 80%;
+    min-height: 80px;
+    /* background-color: rgb(255, 217, 217); */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+main #locations .location {
+    width: 85%;
+    min-height: 50px;
+    background-color: rgb(208, 208, 208, 0.3);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    border-radius: 15px;
+}
+
+main #locations .location .etat {
+    min-width: 70px;
+    height: 40px;
+    border: 1px solid rgb(119, 102, 102);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+main #locations .location .enattente {
+    background-color: orange;
+    color: white;
+    border: 1px solid rgb(219, 130, 23);
+    font-size: 22px;
+    padding: 25px 30px;
+}
+
+main #locations .location .acceptee {
+    background-color: rgb(0, 156, 60);
+    color: white;
+    border: 1px solid rgb(0, 130, 22);
+    font-size: 22px;
+    padding: 25px 30px;
+}
+
+main #locations .location .refusee {
+    background-color: rgb(200, 8, 8);
+    color: white;
+    border: 1px solid rgb(137, 0, 0);
+    font-size: 22px;
+    padding: 25px 30px;
+}
+
+main #locations .location .annulee {
+    background-color: rgb(185, 185, 185);
+    color: rgb(38, 38, 38);
+    border: 1px solid rgb(215, 215, 215);
+    font-size: 24px;
+    padding: 25px 40px;
+}
+
+main #locations .location .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 20%;
+    /* background-color: beige; */
+}
+
+main #locations .location .annulerDemande {
+    min-width: 70px;
+    height: 40px;
+    border: 2px solid rgb(184, 44, 44);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 18px;
+    background-color: rgb(216, 20, 20);
+    color: white;
+}
+
+main #locations .location .map {
+    min-width: 100px;
+    width: 20%;
+    height: 150px;
+    border-radius: 10px;
+    z-index: 1;
+    border: 1px solid gray;
+}
+
+main #locations .location .infos {
+    width: 50%;
+    min-height: 50px;
+    /* background-color: rgb(255, 255, 255); */
+    border-radius: 5px;
+    padding: 10px;
+    padding-bottom: 25px;
+    font-size: 20px;
+}
+
+main #locations .location .infos > * {
+    padding-left: 10px;
+}
+
+main #locations .location .infos >a {
+    background-color: rgb(64, 70, 189);
+    padding: 10px;
+    margin-left: 10px;
+    text-decoration: none;
+    color: white;
+    margin-bottom: 100px;
+    border-radius: 8px;
+    padding: 10px 15px;
+}
+
+main #locations .location .infos >a:hover {
+    background-color: rgb(161, 202, 255);
+    box-shadow: 0px 0px 29px 10px rgba(14, 186, 205, 0.47);
+    color: black;
+    transition: all 0.3s ease-in-out;
+}
+
+main #locations .location i {
+    font-size: 30px;
+    cursor: pointer;
+    color:black;
+    margin-top: 10px;
+    color: rgb(255, 0, 0);
+}

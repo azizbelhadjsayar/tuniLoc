@@ -1,0 +1,129 @@
+
+#POPUP {
+    backdrop-filter: blur(3px);
+    position:absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 80880;
+}
+
+#confirmationPopup {
+    width: 40%;
+    min-width: 350px;
+    height: 80%;
+    background-color: white;
+    z-index: 8080;
+    border-radius: 25px;
+    position: relative;
+}
+
+
+#confirmationPopup #closeButton {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 28px;
+    cursor: pointer;
+    color: gray;
+}
+
+#confirmationPopup #page2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color: rgb(179, 122, 46); */
+    height: 90%;
+    gap: 20px;
+}
+
+#confirmationPopup #page2 #info {
+    color: white;
+    background-color: rgb(196, 36, 36);
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 8px;
+}
+
+#confirmationPopup .footer {
+    position: absolute;
+    bottom: 0;
+    min-height: 80px;
+    width: 100%;
+    box-shadow: 0px -27px 33px -11px rgba(0,0,0,0.12);
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+#confirmationPopup #page1 .footer {
+    justify-content: flex-end;
+} 
+
+#confirmationPopup #page1 #texte {
+    font-size: 20px;
+    padding: 70px 50px;
+}
+
+#confirmationPopup .button {
+    width: 170px;
+    padding: 10px 12px;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    background-color: rgb(68, 12, 173);
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+#confirmationPopup #page2 #duree, #confirmationPopup #page2 #dates {
+    color: rgb(164, 164, 164);
+    font-size: 16px;
+}
+
+#confirmationPopup #page2 #duree>span, #confirmationPopup #page2 #dates>span {
+    color: black;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.hiddenPopup {
+    animation: hideAnim 0.4s ease-in 0s 1 normal forwards;
+}
+
+.displayedPopup {
+    animation: displayAnim 0.4s ease-in 0s 1 normal forwards;
+}
+
+@keyframes displayAnim {
+	0% {
+		opacity: 0;
+		transform: translateY(50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes hideAnim {
+	0% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	100% {
+		opacity: 0;
+		transform: translateY(50px);
+	}
+}

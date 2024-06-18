@@ -1,0 +1,142 @@
+@font-face {
+    font-family: myFont;
+    src: url(SFUIText-Regular.otf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    /* background-color: black; */
+}
+body {
+    /* background-color: rgb(0, 193, 193); */
+    position: relative;
+}
+
+main {
+    padding-top: 120px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+main input[type="file"] {
+    display: none;
+}
+
+main .imageIcon {
+    height: 120px;
+    width: 100%;
+    background-image: url(./images/camera.png);
+    background-position: center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    cursor: pointer;
+    z-index: 0;
+}
+
+
+main .photos label {
+    position: relative;
+    width: clamp(100px,17%,120px);
+    height: 120px;
+    background-color: rgb(239, 239, 239,0.4);
+    border-radius: 15px;
+    border: 1px solid rgb(177, 174, 174,0.7);
+}
+ 
+main form {
+    width: clamp(300px,80%,800px);
+    /* background-color: beige; */
+}
+
+main > h2 {
+    background-color: antiquewhite;
+    font-size: 30px;
+    padding: 20px 30px;
+    border-radius: 10px;
+    color: white;
+    background-color: rgb(52, 0, 63);
+    margin-bottom: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+main form > h2 {
+    font-size: 25px;
+}
+
+main input[type="text"],textarea {
+    width: 100%;
+    resize: none;
+    padding: 10px;
+    font-size: 17px;
+    background-color: rgb(239, 239, 239,0.3);
+    border-radius: 8px;
+    border: 1px solid rgba(221, 221, 221, 0.8);
+}
+
+main input[type="text"]::placeholder,textarea::placeholder {
+    color: rgba(195, 195, 195, 0.8);
+}
+
+main .photos, main .inputContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+    width: 97%;
+    padding-top: 10px;
+}
+
+
+main .pricesContainer {
+    justify-content: flex-start;
+}
+main .prices {
+    max-width: 150px;
+}
+main .priceLabel {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    text-align: center;
+}
+
+main #map {
+    height: 300px;
+    border-radius: 8px;
+}
+
+main input[id="lat"],input[id="lng"] {
+    display: none;
+}
+
+main form #buttonContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main form #submitButton {
+    width: 40%;
+    padding: 10px 20px;
+    margin-top: 40px;
+    margin-bottom: 60px;
+    border-radius: 15px;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: rgb(7, 25, 127);
+    color: white;
+    border: none;
+}

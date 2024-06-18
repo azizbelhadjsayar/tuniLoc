@@ -1,0 +1,260 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+}
+
+
+main {
+    width: 100%;
+    /* background-color: antiquewhite; */
+    min-height: 200px;
+    padding-top: 65px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+}
+
+main #demandes {
+    width: 90%;
+    height: 90vh;
+    background-color: rgb(238, 216, 255, 0.2);
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    gap: 40px;
+    padding-bottom: 30px;
+}
+
+main #demandes .demande {
+    width: 80%;
+    min-height: 100px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor: pointer;
+    box-shadow: 0px 0px 19px 6px rgba(0,0,0,0.28);
+    border: 1px solid rgb(156, 105, 177,0.6);
+    position: relative;
+}
+
+main #demandes .demande >.enAttenteAlert {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: red;
+    z-index: 2;
+    right: -9px;
+    top: -10px;
+}
+
+main #demandes .demande .photoArticle {
+    width: 22%;
+    height: 60px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+}
+
+main #demandes .demande .infos {
+    width: 45%;
+    /* background-color: blueviolet; */
+    min-height: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+main #demandes .demande .infos > * {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    height: 20px;
+    width: 100%;
+    /* background-color: antiquewhite; */
+    font-size: 14px;
+}
+
+main #demandes .demande .temps {
+    width: 22%;
+    height: 60px;
+    padding-left: 5px;
+    text-align: center;
+    font-weight: 500;
+}
+
+main #discussion {
+    display: none;
+    width: 75%;
+    height: 90vh;
+    background-color: rgb(255, 255, 255);
+    overflow-y: scroll;
+    scrollbar-width: none;
+    padding-top: 30px;
+    padding-bottom: 80px;
+    border-left: 1px solid rgba(235, 193, 255, 0.8);
+}
+
+main #discussion .banner {
+    width: 100%;
+    background-color: rgb(240, 240, 240);
+    height: 80px;
+    position: fixed;
+    padding-left: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(15, 0, 82);
+    border-bottom: 1px solid rgb(197, 129, 228, 0.6);
+    border-top: 1px solid rgb(197, 129, 228, 0.6);
+}
+
+main #discussion .banner #locatairePhoto {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 18px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main #discussion .content {
+    margin-top: 100px;
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+main #discussion .content .article {
+    width: 320px;
+    min-height: 200px;
+    background-color: rgb(238, 216, 255, 0.35);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+    gap: 10px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+main #discussion .content .article .duree {
+    color: red;
+}
+
+main #discussion .content .article .gains {
+    color: rgb(255, 0, 0);
+    font-weight: 800;
+    font-size: 22px;
+}
+
+main #discussion .content .article .articleContainer {
+    width: 60%;
+    min-height: 100px;
+    background-color: rgba(219, 219, 219, 0.6);
+    border-radius: 5px;
+    font-size: 25px;
+}
+
+main #discussion .content .article .articleContainer .image {
+    width: 100%;
+    height: 100px;
+    /* background-color: blue; */
+    border-radius: 8px 8px 0px 0px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+main #discussion .content .article .articleContainer .titre {
+    text-align: center;
+}
+
+main #discussion .content .article .button {
+    width: 85%;
+    border-radius: 20px;
+    padding: 8px 10px;
+    font-weight: 600;
+}
+main #discussion .content .article #confirmer {
+    background-color: rgb(12, 12, 162);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+main #discussion .content .article #confirmer:disabled {
+    background-color: rgb(202, 202, 202);
+    cursor: default;
+}
+
+main #discussion .content .article #refuser {
+    background-color: transparent;
+    border: 2px solid rgb(189, 17, 100);
+    color: rgb(189, 17, 100);
+    cursor: pointer;
+}
+
+main #discussion .content .article #refuser:disabled {
+    border: 2px solid rgb(202, 202, 202);
+    color: rgb(202, 202, 202);
+    cursor: default;
+}
+
+main #discussion .content .message {
+    background-color: rgb(238, 216, 255, 0.35);
+    max-width: 50%;
+    min-width: 40px;
+    padding-right: 50px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    border-radius: 18px 18px 18px 5px;
+}
+
+main #discussion .banner #statutLocation {
+    padding: 10px 15px;
+    margin-left: 30px;
+    border-radius: 10px;
+}
+
+main #discussion .banner #articleEnPause {
+    display: none;
+    margin-left:20px;
+    color: red;
+}
+
+.enattente {
+    background-color: rgb(235, 188, 0);
+    color: white;
+}
+
+.acceptee {
+    background-color: rgb(26, 168, 62);
+    color: white;
+}
+
+.refusee {
+    background-color: rgb(206, 3, 3);
+    color: white;
+}

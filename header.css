@@ -1,0 +1,125 @@
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgb(254, 254, 254);
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+    min-height: 95px;
+    border-bottom: 1px solid rgb(190, 190, 190, 0.6);
+}
+
+
+header > #logoContainer{
+    width: 10%;
+    min-width: 100px;
+    min-height: 85px;
+    background-image: url(images/logo1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+header > #searchContainer{
+    width: 40%;
+    min-width: 300px;
+    /* background-color: rgb(173, 141, 100); */
+    z-index: 5000;
+
+}
+
+header > #navigationContainer{
+    width: 35%;
+    min-width: 300px;
+    /* background-color: rgb(208, 208, 208); */
+    min-height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: nowrap;
+}
+
+header #navigationContainer >* {
+    text-decoration: none;
+    /* background-color: aquamarine; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+header > #navigationContainer>#profilenav {
+    gap: 10px;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.4);
+}
+
+header #navigationContainer>#profilenav #image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: azure;
+}
+
+header > #navigationContainer>#profilenav>#nav {
+    position: absolute;
+    background-color: rgb(238, 238, 238);
+    width: 220%;
+    top: 105%;
+    right: 10px;
+    flex-direction: column;
+    border-radius: 10px;
+    z-index: 20;
+    margin-left: 10px;
+    border: 2px solid black;
+}
+
+header > #navigationContainer>#profilenav>.enAttenteAlert {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: red;
+    z-index: 2;
+    right: 7px;
+    top: 7px;
+}
+
+header > #navigationContainer>#profilenav>#nav #boitereception div {
+    background-color: red;
+    color: white;
+    display: inline;
+    border-radius: 50%;
+    margin-left: 5px;
+    padding: 3px 10px;
+}
+
+.hiddenNav{
+    display: none;
+}
+
+.visibleNav {
+    display: flex;
+}
+
+header > #navigationContainer>#profilenav>#nav a {
+    text-decoration: none;
+    margin: 10px;
+    font-weight: 600;
+    font-size: 18px;
+    text-align: left;
+    padding-left: 15px;
+}

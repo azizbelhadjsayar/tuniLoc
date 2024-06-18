@@ -1,0 +1,260 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+}
+
+main {
+    /* background-color: antiquewhite; */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 95px;
+}
+
+header, footer {
+    width: 100%;
+    min-height: 80px;
+    /* background-color: aqua; */
+}
+
+#banner {
+    width: 85%;
+    min-width: 200px;
+    background-color: rgb(227, 213, 232, 0.6);
+    min-height: 350px;
+    border-radius: 0px 0px 8px 8px;
+}
+
+#info {
+    width: 85%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+
+#info #menu {
+    width: 30%;
+    min-width: 200px;
+    min-height: 70px;
+    /* background-color: black; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#info #menu button {
+    color: black;
+    background-color: rgb(183, 183, 183, 0.25);
+    border: none;
+    padding: 12px 20px;
+    font-weight: 600;
+    width: clamp(150px,50%,220px);
+    border-radius: 30px;
+    font-size: 18px;
+}
+
+#info #menu button:hover {
+    filter: brightness(80%);
+    transition: all 0.2s ease-in-out;
+}
+
+#info #menu button:not(:hover) {
+    transition: all 0.2s ease-in-out;
+}
+
+#info #menu #photo {
+    margin-top: -190px;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background-color: rgb(246, 246, 246);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0px 0px 6px 0px rgba(138, 138, 138, 0.75);
+    /* background-image: url('images/camera.png'); */
+}
+
+#info #content{
+    width: 70%;
+    /* background-color: rgb(149, 79, 79); */
+    min-height: 70px;
+}
+
+#switcher{
+    width: 100%;
+    /* background-color: chocolate; */
+    display: flex;
+    justify-content: center;
+}
+
+#switcher > #switchercontainer {
+    padding: 5px;
+    /* background-color: yellowgreen; */
+    border: 1px solid rgb(218, 218, 218, 0.6);
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    border-radius: 30px;
+    margin-bottom: 20px;
+}
+#switcher > #switchercontainer .option {
+    border-radius: 25px;
+    padding: 14px;
+    font-size: 17px;
+    font-weight: 600;
+    cursor:  pointer;
+}
+
+#switcherdisplay {
+    width: 100%;
+    /* background-color: rgb(140, 117, 100); */
+    display: flex;
+    justify-content: center;
+    min-height: 100px;
+    flex-wrap: wrap;
+}
+
+#switcherdisplay .displayoption {
+    width: 100%;
+    background-color: rgb(227, 213, 232, 0.4);
+}
+
+#switcherdisplay #items {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+#switcherdisplay .displayoption .item {
+    position: relative;
+    min-height: 250px;
+    width: 250px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#switcherdisplay .displayoption .item i {
+    background-color: aliceblue;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#switcherdisplay .displayoption .item .photo {
+    height: 180px;
+    width: 100%;
+    background-color: rgb(109, 101, 89);
+    border-radius: 8px 8px 0px 0px;
+    /* background-image: url('C:/Users/LENOVO/Downloads/book.png'); */
+    background-repeat: no-repeat;
+    background-position:top;
+    background-size: cover;
+}
+
+#switcherdisplay .displayoption .item .titre {
+    padding: 10px;
+    color: rgb(40, 40, 46);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#switcherdisplay .displayoption .item .prix {
+    padding-left: 10px;
+    color: rgb(71, 71, 206);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#switcherdisplay .displayoption .item > a {
+    text-align: center;
+    background-color: rgb(67, 22, 227);
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: white;
+}
+
+#switcherdisplay .displayoption .item .menu {
+    position: absolute;
+    background-color: azure;
+    right: 10px;
+    top: 55px;
+    border-radius: 10px;
+    flex-direction: column;
+    box-shadow: 0px 0px 87px 35px rgba(0,0,0,0.37);
+    width: 70%;
+    z-index: 7;
+}
+
+#switcherdisplay .displayoption .item .paused {
+    position: absolute;
+    background-color: rgb(179, 0, 90);
+    color: white;
+    right: 10px;
+    top: 135px;
+    padding: 5px 10px;
+    border-radius: 8px;
+    z-index: 0;
+}
+
+.displayedItemMenu {
+    display: flex;
+}
+
+.hiddenItemMenu {
+    display: none;
+}
+
+.displayedItemPaused {
+    display: flex;
+}
+
+.hiddenItemPaused {
+    display: none;
+}
+
+#switcherdisplay .displayoption .item .menu a {
+    text-decoration: none;
+    padding: 15px 20px;
+}
+
+#switcherdisplay .displayoption .item .menu a:nth-child(2) {
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+
+#content > #username {
+    font-size: 28px;
+    font-weight: 800;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+#content > #description {
+    padding-top: 20px;
+    padding-left: 20px;
+    font-size: 20px;
+}
